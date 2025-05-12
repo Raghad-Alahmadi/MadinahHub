@@ -10,7 +10,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 
 COPY --from=build /app/out ./
-COPY Backend/MHBackend/MadinahHubDb.sqlite ./MadinahHubDb.sqlite
+COPY MadinahHubDb.sqlite ./MadinahHubDb.sqlite
 
 EXPOSE 80
 
