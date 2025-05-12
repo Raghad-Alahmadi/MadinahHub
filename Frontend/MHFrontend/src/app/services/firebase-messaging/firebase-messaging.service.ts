@@ -32,7 +32,7 @@ export class FirebaseMessagingService {
   currentMessage = new BehaviorSubject<any>(null);
   private fcmToken: string | null = null;
   private messaging: any;
-  private apiUrl = 'http://localhost:5063/api/notification';
+  private apiUrl = 'https://madinahhub-1.onrender.com/api/notification';
   private tokenPending = false;
 
   constructor(

@@ -17,8 +17,8 @@ export interface Message {
   providedIn: 'root'
 })
 export class ChatService {
-  private apiUrl = 'http://localhost:5063/api/chat';
-  private hubUrl = 'http://localhost:5063/chatHub';
+  private apiUrl = 'https://madinahhub-1.onrender.com/api/chat';
+  private hubUrl = 'https://madinahhub-1.onrender.com/chatHub';
   private hubConnection: signalR.HubConnection | null = null;
   
   // Subjects for message events

@@ -42,7 +42,7 @@ export interface UserProfile {
 export class AuthService {
   private auth = getAuth(initializeApp(firebaseConfig));
   private currentUserSubject = new BehaviorSubject<User | null>(null);
-  private apiUrl = 'http://localhost:5063/api';
+  private apiUrl = 'https://madinahhub-1.onrender.com/api';
   private userProfileSubject = new BehaviorSubject<UserProfile | null>(null);
   private isNewlyRegistered = false;
   private jwtToken = new BehaviorSubject<string | null>(null);

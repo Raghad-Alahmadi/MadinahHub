@@ -51,7 +51,7 @@ export interface EventUpdate {
   providedIn: 'root'
 })
 export class EventService {
-  private apiUrl = 'http://localhost:5063/api/Event';
+  private apiUrl = 'https://madinahhub-1.onrender.com/api/Event';
 
   constructor(
     private http: HttpClient,

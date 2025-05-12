@@ -60,7 +60,7 @@ export interface UserTicketDto {
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:5063/api/User';
+  private apiUrl = 'https://madinahhub-1.onrender.com/api/User';
 
   constructor(
     private http: HttpClient,

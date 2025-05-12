@@ -24,7 +24,7 @@ export interface BookingCreateResponse {
   providedIn: 'root'
 })
 export class BookingsService {
-  private apiUrl = 'http://localhost:5063/Booking';
+  private apiUrl = 'https://madinahhub-1.onrender.com/Booking';
 
   constructor(
     private http: HttpClient,

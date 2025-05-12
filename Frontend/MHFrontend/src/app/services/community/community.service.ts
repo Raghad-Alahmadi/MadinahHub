@@ -45,7 +45,7 @@ export interface CommunityNameDto {
   providedIn: 'root'
 })
 export class CommunityService {
-  private apiUrl = `http://localhost:5063/communities`;
+  private apiUrl = `https://madinahhub-1.onrender.com/communities`;
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
