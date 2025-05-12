@@ -2,7 +2,7 @@ services:
   - type: web
     name: dotnet-api-sqlite
     runtime: dotnet
-    repo: https://github.com/RazanXCode/MadinahHub
+    repo: https://github.com/Raghad-Alahmadi/MadinahHub
     branch: test
     buildCommand: dotnet build
     startCommand: dotnet run --project Backend/MHBackend
@@ -19,7 +19,7 @@ services:
   - type: web
     name: angular-frontend
     runtime: node
-    repo: https://github.com/RazanXCode/MadinahHub
+    repo: https://github.com/Raghad-Alahmadi/MadinahHub
     branch: test
     buildCommand: cd Frontend/MHFrontend && npm install && npm run build
     startCommand: serve -s Frontend/MHFrontend/dist
