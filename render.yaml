@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: dotnet-api-sqlite
+    runtime: dotnet
+    repo: https://github.com/RazanXCode/MadinahHub
+    branch: main
+    buildCommand: dotnet build
+    startCommand: dotnet run --project Backend/MHBackend
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: TWILIO_ACCOUNT_SID
+        value: ${TWILIO_ACCOUNT_SID}  # Set in Render dashboard
+      - key: TWILIO_AUTH_TOKEN
+        value: ${TWILIO_AUTH_TOKEN}
+      - key: TWILIO_PHONE_NUMBER
+        value: ${TWILIO_PHONE_NUMBER}
+
+  - type: web
+    name: angular-frontend
+    runtime: node
+    repo: https://github.com/RazanXCode/MadinahHub
+    branch: main
+    buildCommand: cd Frontend/MHFrontend && npm install && npm run build
+    startCommand: serve -s Frontend/MHFrontend/dist

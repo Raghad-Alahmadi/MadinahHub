@@ -107,7 +107,7 @@ namespace MHBackend.Data
                 .HasOne(n => n.User)
                 .WithMany(u => u.Notifications)
                 .HasForeignKey(n => n.UserId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Message - User & Community (Many-to-1)
             modelBuilder.Entity<Message>()

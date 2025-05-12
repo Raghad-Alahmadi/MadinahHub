@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication;
 using MHBackend.Services;
 using System.Text.Json.Serialization;
 using MHBackend.Hubs; // Add this for SignalR Hubs
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,7 +48,7 @@ builder.Services.AddSwaggerGen();
 
 // Register Database service
 builder.Services.AddDbContext<MyAppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
 // Add Services
