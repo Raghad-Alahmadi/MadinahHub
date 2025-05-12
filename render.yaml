@@ -3,7 +3,7 @@ services:
     name: dotnet-api-sqlite
     runtime: dotnet
     repo: https://github.com/RazanXCode/MadinahHub
-    branch: main
+    branch: test
     buildCommand: dotnet build
     startCommand: dotnet run --project Backend/MHBackend
     envVars:
@@ -20,6 +20,6 @@ services:
     name: angular-frontend
     runtime: node
     repo: https://github.com/RazanXCode/MadinahHub
-    branch: main
+    branch: test
     buildCommand: cd Frontend/MHFrontend && npm install && npm run build
     startCommand: serve -s Frontend/MHFrontend/dist
